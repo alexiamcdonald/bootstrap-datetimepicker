@@ -53,6 +53,64 @@
 
 ----------------------
 
+### Using Existing Values
+
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" value="2017-03-08 08:00:00"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+		    format: 'YYYY-MM-DD hh:mm:ss'
+		});
+            });
+	    $('#datetimepicker1').on('dp.change', function() {
+  		$('#datetimepicker1').find('input').val();
+	    });
+        </script>
+    </div>
+</div>
+
+#### Code
+
+```
+<div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" value="2017-03-08 08:00:00"/>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+		    format: 'YYYY-MM-DD hh:mm:ss'
+		});
+            });
+	    $('#datetimepicker1').on('dp.change', function() {
+  		$('#datetimepicker1').find('input').val();
+	    });
+        </script>
+    </div>
+</div>
+```
+
+----------------------
+
 ### Using Locales
 
 <div class="container">
